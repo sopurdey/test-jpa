@@ -18,4 +18,39 @@
 			<property name="hibernate.format_sql" value="true" />
 		</properties>
 	</persistence-unit>
+
+	<persistence-unit name="banque"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<!-- liste d'entités à utiliser -->
+		<class>fr.diginamic.banque.bo.Adresse</class>
+		<class>fr.diginamic.banque.bo.AssuranceVie</class>
+		<class>fr.diginamic.banque.bo.Banque</class>
+		<class>fr.diginamic.banque.bo.Client</class>
+		<class>fr.diginamic.banque.bo.Compte</class>
+		<class>fr.diginamic.banque.bo.LivretA</class>
+		<class>fr.diginamic.banque.bo.Operation</class>
+		<class>fr.diginamic.banque.bo.Virement</class>
+		<properties>
+			<!-- desactiver l'autodetection des classes de type @Entity -->
+			<property name="hibernate.archive.autodetection" value="" />
+
+			<!-- Activation de la génération des tables manquantes uniquement -->
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+
+			<!-- Affichage des requêtes SQL -->
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+
+			<!-- Paramètres d'accès à la BDD -->
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://bylmq2hiypy7uiefmlwc-mysql.services.clever-cloud.com:3306/bylmq2hiypy7uiefmlwc" />
+			<property name="javax.persistence.jdbc.user"
+				value="unxp2tzlurm9qsle" />
+			<property name="javax.persistence.jdbc.password"
+				value="2bH61n9HQzxvUvKsqzl4" />
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.cj.jdbc.Driver" />
+		</properties>
+	</persistence-unit>
 </persistence>

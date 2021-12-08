@@ -16,11 +16,10 @@ public class TestBibliotheque {
 		// Ouverture de transation JPA
 		EntityTransaction et = em.getTransaction();
 	//	et.begin();
-		/*
+		
 		// 1) Réalisez une requête qui permet d’extraire un emprunt et tous ses livres associés.
 		Emprunt emprunt = em.find(Emprunt.class, 1);
 		System.out.println(emprunt.getLivres());
-		*/
 		
 		// 2) Réalisez une requête qui permet d’extraire tous les emprunts d’un client donné.
 		Client client = em.find(Client.class, 3);
